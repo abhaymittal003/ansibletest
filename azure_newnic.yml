@@ -1,20 +1,25 @@
 ---
-#   - name : create public IP
+- hosts: localhost
+  gather_facts: False
+  var:
+  AnsibleRG:"rgansible"
+  tasks:
+# - name : create public IP
 #     azure_rm_publicipaddress:
 #       resource_group: "{{ansible_rg}}"
 #       name: publicip2
 #       allocation_method: Dynamic
-   - name: Add creat security group that allows SSH
-     azure_rm_securitygroup:
-       resource_group: "{{ansible_rg}}"
-       name: "{{secgroupname}}"
-       rules: 
-        - name : SSH
-          protocol: Tcp
-          destination_port_range: 22
-          access: Allow
-          priority: 101
-          direction: Inbound 
+  - name: Add creat security group that allows SSH
+    azure_rm_securitygroup:
+      resource_group: "{{ansible_rg}}"
+      name: ng10
+      rules: 
+      - name : SSH
+         protocol: Tcp
+         destination_port_range: 22
+         access: Allow
+         priority: 101
+         direction: Inbound 
 #   - name: Create NIC
 #     azure_rm_networkinterface:
 #       resource_group: "{{ansible_rg}}"
