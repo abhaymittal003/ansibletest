@@ -12,7 +12,7 @@
   - name: Add creat security group that allows SSH
     azure_rm_securitygroup:
       resource_group: rgansible
-      name: ng10
+      name: "{{item}}"
       rules: 
        - name : SSH
          protocol: Tcp
@@ -20,6 +20,9 @@
          access: Allow
          priority: 101
          direction: Inbound 
+    with_items:
+        - ng11
+        - mg12     
 #   - name: Create NIC
 #     azure_rm_networkinterface:
 #       resource_group: "{{ansible_rg}}"
