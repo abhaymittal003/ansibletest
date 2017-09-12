@@ -4,7 +4,7 @@
        resource_group: rgansible
        name: ng7
        rules: 
-          name : SSH
+        - name : SSH
           protocol: Tcp
           destination_port_range: 22
           access: Allow
