@@ -12,3 +12,8 @@
  #          direction: Inbound
 - debug:
         msg: "System  has uuid "
+- name: remove storage
+  azure_rm_storageaccount:
+       resource_group: rgansible
+       name: storaccrgansible
+       state: absent
