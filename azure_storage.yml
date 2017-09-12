@@ -1,0 +1,9 @@
+---
+ - hosts: localhost
+   gather_facts: False
+   tasks:
+   - name : create storage account
+     azure_rm_storageaccount:
+       resource_group: rgansible
+       name: storaccrgansible
+       account_type: Standard_LRS  
