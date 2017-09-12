@@ -1,8 +1,8 @@
 ---
 - hosts: localhost
   gather_facts: False
-  var:
-  AnsibleRG:"rgansible"
+  vars:
+  ansible_rg:"rgansible"
   tasks:
 # - name : create public IP
 #     azure_rm_publicipaddress:
