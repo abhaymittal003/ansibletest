@@ -3,7 +3,7 @@
   gather_facts: False
   roles:
    - nic
-  tasks
+  tasks:
    - name: Add creat security group that allows SSH
      azure_rm_securitygroup:
        resource_group: rgansible
