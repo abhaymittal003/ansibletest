@@ -1,0 +1,9 @@
+---
+ - hosts: localhost
+   gather_facts: False
+   tasks:
+   - name : Delete storage account
+     azure_rm_storageaccount:
+       resource_group: rgansible
+       name: storaccrgansible
+       status: absent 
