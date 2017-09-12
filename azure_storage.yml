@@ -1,7 +1,7 @@
 ---
  - hosts: localhost
    gather_facts: False
-   var:
+   vars:
      ansible_rg: "rgansible"
    tasks:
    - name : create storage account
