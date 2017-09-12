@@ -1,6 +1,8 @@
 ---
  - hosts: localhost
    gather_facts: False
+   var:
+   AnsibleRG:"rgansible"
    tasks:
    - name : Delete storage account addrd onlinr
      azure_rm_storageaccount:
