@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  gather_facts: False
+  tasks:
+  - name: remove security group as per list
+    azure_rm_securitygroup:
+      resource_group: rgansible
+      name: "{{item}}"
+      state: absent
+    with_items:
+        - ng11
+        - mg12     
