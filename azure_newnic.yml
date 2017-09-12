@@ -1,8 +1,8 @@
 ---
 - hosts: localhost
   gather_facts: False
-  vars:
-  ansible_rg: "rgansible"
+#  vars:
+#  ansible_rg: "rgansible"
   tasks:
 # - name : create public IP
 #     azure_rm_publicipaddress:
@@ -11,7 +11,7 @@
 #       allocation_method: Dynamic
   - name: Add creat security group that allows SSH
     azure_rm_securitygroup:
-      resource_group: "{{ansible_rg}}"
+      resource_group: rgansible
       name: ng10
       rules: 
        - name : SSH
