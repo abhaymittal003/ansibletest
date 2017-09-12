@@ -6,8 +6,8 @@
   tasks:
    - name: Add creat security group that allows SSH
      azure_rm_securitygroup:
-       resource_group: {{ansible_rg}}
-       name: ng5
+       resource_group: "{{ansible_rg}}"
+       name: ng9
        rules: 
         - name : SSH
           protocol: Tcp
