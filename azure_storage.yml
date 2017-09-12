@@ -2,7 +2,7 @@
  - hosts: localhost
    gather_facts: False
    var:
-   ansible_rg: "rgansible"
+     ansible_rg: "rgansible"
    tasks:
    - name : create storage account
      azure_rm_storageaccount:
