@@ -1,4 +1,4 @@
-
+---
 #   - name : create public IP
 #     azure_rm_publicipaddress:
 #       resource_group: "{{ansible_rg}}"
@@ -23,3 +23,4 @@
 #       subnet: rgansiblesubnet1
 #       public_ip_name: publicip2
 #       security_group: secgroup2     
+...
