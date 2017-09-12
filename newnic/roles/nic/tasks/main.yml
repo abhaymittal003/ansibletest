@@ -1,9 +1,9 @@
 ---
-#- name: Add creat security
- #  azure_rm_securitygroup:
- #       resource_group: rgansible
- #       name: ng5
- #       rules: 
+- name: Add creat security
+  azure_rm_securitygroup:
+       resource_group: rgansible
+       name: ng6
+ #      rules: 
  #        - name : SSH
  #          protocol: Tcp
  #          destination_port_range: 22
