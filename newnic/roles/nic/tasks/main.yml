@@ -2,14 +2,14 @@
 - name: Add creat security
   azure_rm_securitygroup:
        resource_group: rgansible
-       name: ng6
- #      rules: 
- #        - name : SSH
- #          protocol: Tcp
- #          destination_port_range: 22
- #          access: Allow
- #          priority: 101
- #          direction: Inbound
+       name: ng7
+       rules: 
+          name : SSH
+          protocol: Tcp
+          destination_port_range: 22
+          access: Allow
+          priority: 101
+          direction: Inbound
 - debug:
         msg: "System  has uuid "
 - name: remove storage
