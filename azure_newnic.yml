@@ -14,7 +14,7 @@
       resource_group: "{{ansible_rg}}"
       name: ng10
       rules: 
-      - name : SSH
+       - name : SSH
          protocol: Tcp
          destination_port_range: 22
          access: Allow
