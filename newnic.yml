@@ -5,4 +5,4 @@
     - vars.yml
    tasks:
     -name : add new NIC
-     include : azure_newnic.yml
+     import_tasks : azure_newnic.yml
