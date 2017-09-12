@@ -1,4 +1,4 @@
- ---
- #- name: Add creat security group that allows SSH
- - debug:
+---
+ # - name: Add creat security group that allows SSH
+- debug:
         msg: "System  has uuid "
