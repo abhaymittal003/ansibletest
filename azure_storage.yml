@@ -1,9 +1,11 @@
 ---
  - hosts: localhost
    gather_facts: False
+   var:
+   ansible_rg: "rgansible"
    tasks:
    - name : create storage account
      azure_rm_storageaccount:
-       resource_group: rgansible
+       resource_group: "{{ansible_rg}}"
        name: storaccrgansible
        account_type: Standard_LRS  
