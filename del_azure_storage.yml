@@ -6,4 +6,4 @@
      azure_rm_storageaccount:
        resource_group: rgansible
        name: storaccrgansible
-       status: absent 
+       state: absent 
