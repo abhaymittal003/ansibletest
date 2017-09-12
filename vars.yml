@@ -1,2 +1,2 @@
  ansible_rg: "rgansible"
- secgroupname: ["nsg2"]
+ secgroupname: "nsg2","nsg3"
