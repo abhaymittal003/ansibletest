@@ -1,0 +1,28 @@
+---
+ - hosts: localhost
+   gather_facts: False
+   tasks:
+   - name : create public IP
+     azure_rm_publicipaddress:
+       resource_group: rgansible
+       name: publicip2
+       allocation_method: Dynamic
+   - name: Add creat security group that allows SSH
+     azure_rm_securitygroup:
+       resource_group: rgansible
+       name: secgroup2
+       rules: 
+        - name : SSH
+          protocol: Tcp
+          destination_port_range: 22
+          access: Allow
+          priority: 101
+          direction: Inbound 
+   - name: Create NIC
+     azure_rm_networkinterface:
+       resource_group: rgansible
+       name: testnic002
+       virtual_network: rgansiblevnet
+       subnet: rgansiblesubnet1
+       public_ip_name: publicip2
+       security_group: secgroup2     
